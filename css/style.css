@@ -21,16 +21,16 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
+    
     height: 530px;
     width: 250px;
-    border-radius: 20px;
-    background-color: white;
     overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
 
-    transition: height 0.2s, width 0.2s;
+    transform: translate(-50%, -50%);
+    transition: height 0.3s, width 0.3s;
     transition-timing-function: ease;
 }
 
@@ -60,14 +60,38 @@ div#formulario > p {
 }
 
 form > div.campo {
+    position: relative;
+
     height: 40px;
     background-color: #8c4cc9;
-    border-radius: 5px;
-    margin: 5px 0px;
+    border-radius: 8px;
+    margin: 5px 0px; 
 }
 
 form > div > label {
     display: none;
+}
+
+div.campo > span {
+    width: 40px;
+    color: white;
+    font-size: 2.0rem;
+    padding: 5px;
+}
+
+div.campo > input {
+    position: absolute;
+
+    height: 100%;
+    width: calc(100% - 40px);
+    background-color: #82d8d5;
+    border: 2px solid #8c4cc9;
+    border-radius: 0px 8px 8px 0px;
+    padding: 4px; 
+}
+
+div.campo > input:focus-within {
+    background-color: white;
 }
 
 button[type=submit] {
@@ -79,7 +103,9 @@ button[type=submit] {
     background-color: #49a09d;
     border: none;
     border-radius: 5px;
+    margin-top: 15px;
     cursor: pointer;
+
     transition: 0.5s;
 }
 
@@ -96,22 +122,15 @@ form a.botao {
     background-color: white;
     border: 1px solid #49a09d;
     border-radius: 5px;
-    cursor: pointer;
-    transition: 0.5s;
     text-align: center;
     text-decoration: none;
     padding-top: 10px;
     margin-top: 5px;
+    cursor: pointer;
+
+    transition: 0.5s;
 }
 
 form a.botao:hover {
     background-color: #6cd3cf;
 }
-
-/* input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 2px solid blueviolet;
-    background-color: rgba(150, 230, 230, 0.842);
-}*/
